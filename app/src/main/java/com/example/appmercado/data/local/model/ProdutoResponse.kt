@@ -10,5 +10,6 @@ data class ProdutoResponse(
     val categoria_produto: String?,
     val desc_produto: String?,
     val preco_produto: Int?,
+    val img: ByteArray,
     val id_vendedor: Int
 )

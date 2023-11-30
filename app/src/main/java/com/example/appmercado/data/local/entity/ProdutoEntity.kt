@@ -23,6 +23,9 @@ data class ProdutoEntity(
     @ColumnInfo("preco_produto")
     val preco_produto: Int?,
 
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB, name =  "img")
+    val image: ByteArray,
+
     @ColumnInfo("id_vendedor")
     val id_vendedor: Int
 

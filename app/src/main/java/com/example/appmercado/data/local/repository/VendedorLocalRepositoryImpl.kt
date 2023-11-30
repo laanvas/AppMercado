@@ -10,7 +10,7 @@ class VendedorLocalRepositoryImpl @Inject constructor(
     private val VendedorDAO: VendedorDAO
 ): VendedorLocalRepository {
     override fun getAllVendedor(): List<VendedorEntity> {
-        TODO("Not yet implemented")
+        return VendedorDAO.getAllVendedor()
     }
 
     override suspend fun getVendedorById(id_vendedor: Long): VendedorEntity? {
