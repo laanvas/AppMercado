@@ -9,7 +9,7 @@ data class ProdutoResponse(
     val nome_produto: String?,
     val categoria_produto: String?,
     val desc_produto: String?,
-    val preco_produto: Int?,
+    val preco_produto: Double?,
     val img: ByteArray,
     val id_vendedor: Int
 )

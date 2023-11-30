@@ -18,6 +18,9 @@ interface ProdutoDAO {
     @Query("SELECT * FROM Produto WHERE id_produto = :id_produto")
     fun getProdutoById(id_produto: Long): ProdutoEntity?
 
+    @Query("SELECT * FROM Produto WHERE id_vendedor = :id_vendedor")
+    fun getProdutoById_Vendedor(id_vendedor: Long): ProdutoEntity?
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertProduto(produtoEntity: ProdutoEntity): Long
 
@@ -26,5 +29,9 @@ interface ProdutoDAO {
 
     @Delete
     fun deleteProduto(produtoEntity: ProdutoEntity)
+
+    @Query("DELETE FROM Produto WHERE id_vendedor = :id_vendedor")
+    fun deleteProdutoById_Vendedor(id_vendedor: Long): ProdutoEntity?
+
 
 }

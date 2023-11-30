@@ -8,9 +8,14 @@ interface ProdutoLocalRepository {
 
     suspend fun getProdutoById(id_produto: Long): ProdutoEntity?
 
+    suspend fun getProdutoById_Vendedor(id_vendedor: Long): ProdutoEntity?
+
     suspend fun insertProduto(produtoEntity: ProdutoEntity): Long
 
     suspend fun updateProduto(produtoEntity: ProdutoEntity)
 
     suspend fun deleteProduto(produtoEntity: ProdutoEntity)
+
+    suspend fun deleteProdutoById_Vendedor(id_vendedor: Long): ProdutoEntity?
+
 }

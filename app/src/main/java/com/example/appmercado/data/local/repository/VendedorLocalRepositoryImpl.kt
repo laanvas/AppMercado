@@ -14,19 +14,19 @@ class VendedorLocalRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getVendedorById(id_vendedor: Long): VendedorEntity? {
-        TODO("Not yet implemented")
+        return VendedorDAO.getVendedorById(id_vendedor)
     }
 
     override suspend fun insertVendedor(vendedorEntity: VendedorEntity): Long {
-        TODO("Not yet implemented")
+        return VendedorDAO.insertVendedor(vendedorEntity)
     }
 
     override suspend fun updateVendedor(vendedorEntity: VendedorEntity) {
-        TODO("Not yet implemented")
+        return VendedorDAO.updateVendedor(vendedorEntity)
     }
 
     override suspend fun deleteVendedor(vendedorEntity: VendedorEntity) {
-        TODO("Not yet implemented")
+        return VendedorDAO.deleteVendedor(vendedorEntity)
     }
 
 

@@ -31,11 +31,11 @@ data class ProdutoEntity(
     val desc_produto: String?,
 
     @ColumnInfo("preco_produto")
-    val preco_produto: Int?,
+    val preco_produto: Double?,
 
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB, name =  "img")
     val image: ByteArray,
 
     @ColumnInfo("id_vendedor")
-    val id_vendedor: Int
+    val id_vendedor: Long
 )
