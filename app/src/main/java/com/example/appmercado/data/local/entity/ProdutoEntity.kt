@@ -2,12 +2,22 @@ package com.example.appmercado.data.local.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 
-@Entity(tableName = "Produto")
+@Entity(
+    tableName = "Produto",
+    foreignKeys = [
+        ForeignKey(
+            entity = VendedorEntity::class,
+            parentColumns = ["id_vendedor"],
+            childColumns = ["id_vendedor"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ]
+)
 data class ProdutoEntity(
-
     @PrimaryKey(autoGenerate = true)
     val id_produto: Long = 0,
 
@@ -28,5 +38,4 @@ data class ProdutoEntity(
 
     @ColumnInfo("id_vendedor")
     val id_vendedor: Int
-
 )

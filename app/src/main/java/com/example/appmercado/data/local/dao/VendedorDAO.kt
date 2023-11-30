@@ -7,7 +7,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.appmercado.data.local.entity.VendedorEntity
-import java.util.concurrent.Flow
 
 @Dao
 interface VendedorDAO {
