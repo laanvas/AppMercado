@@ -4,7 +4,7 @@ import com.example.appmercado.data.local.entity.ProdutoEntity
 import java.util.concurrent.Flow
 
 interface ProdutoLocalRepository {
-    fun getAllProduto(): Flow<List<ProdutoEntity>>
+    fun getAllProduto(): List<ProdutoEntity>
 
     suspend fun getProdutoById(id_produto: Long): ProdutoEntity?
 

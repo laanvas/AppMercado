@@ -4,4 +4,7 @@
 plugins {
     id("com.android.application") version "8.1.4" apply false
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    kotlin("kapt") version "1.9.21" apply true // get kapt
+
+
 }

@@ -6,7 +6,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.appmercado.data.local.entity.ProdutoEntity
 import com.example.appmercado.data.local.entity.VendedorEntity
 import java.util.concurrent.Flow
 
@@ -14,17 +13,17 @@ import java.util.concurrent.Flow
 interface VendedorDAO {
 
     @Query("SELECT * FROM Vendedor")
-    fun getAllVendedor(): Flow<List<VendedorEntity>>
+    fun getAllVendedor(): List<VendedorEntity>
 
     @Query("SELECT * FROM Vendedor WHERE id_vendedor = :id_vendedor")
-    fun getVendedorById(id_vendedor: Long): ProdutoEntity?
+    fun getVendedorById(id_vendedor: Long): VendedorEntity?
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertVendedor(produtoEntity: ProdutoEntity): Long
+    fun insertVendedor(vendedorEntity: VendedorEntity): Long
 
     @Update
-    fun updateVendedor(produtoEntity: ProdutoEntity)
+    fun updateVendedor(vendedorEntity: VendedorEntity)
 
     @Delete
-    fun deleteVendedor(produtoEntity: ProdutoEntity)
+    fun deleteVendedor(vendedorEntity: VendedorEntity)
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.Flow
 interface ProdutoDAO {
 
     @Query("SELECT * FROM Produto")
-    fun getAllProduto(): Flow<List<ProdutoEntity>>
+    fun getAllProduto(): List<ProdutoEntity>
 
     @Query("SELECT * FROM Produto WHERE id_produto = :id_produto")
     fun getProdutoById(id_produto: Long): ProdutoEntity?
